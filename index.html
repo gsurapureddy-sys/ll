@@ -1,0 +1,119 @@
+<!-- 
+    IMPORTANT: DO NOT PRESS THE 'PLAY' BUTTON IN VS CODE!
+    The Play button runs Python. This is a Website (HTML).
+    To run this: Save the file, go to your folder, and double-click 'index.html'.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        /* CSS: This makes the website look beautiful */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.5s;
+        }
+
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a202c;
+        }
+        body.dark-mode .card {
+            background-color: #2d3748;
+            color: white;
+        }
+        body.dark-mode h1 {
+            color: white;
+        }
+        body.dark-mode p {
+            color: #cbd5e0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML: The content of your website -->
+    <div class="card">
+        <div class="profile-pic">🚀</div>
+        <h1>Hello, World!</h1>
+        <p>I am learning to code.</p>
+        <p>This is my very first website built with HTML, CSS, and JavaScript.</p>
+        
+        <button onclick="toggleTheme()">Click for Magic</button>
+    </div>
+
+    <script>
+        // JavaScript: The logic (Action)
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            console.log("Theme toggled!");
+        }
+    </script>
+
+</body>
+</html>
